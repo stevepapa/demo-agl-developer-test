@@ -1,0 +1,7 @@
+<h2 class="list-title">{{ownerGender}}</h2>
+<ul *ngIf="pets.length">
+    <li *ngFor="let p of pets">
+        {{p.name}}
+    </li>
+</ul>
+<span *ngIf="!pets.length">No pets for this gender.</span>

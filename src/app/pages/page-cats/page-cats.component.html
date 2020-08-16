@@ -1,0 +1,19 @@
+<h1>Cats</h1>
+
+<div *ngIf="pets$ | async as pets; else loading">
+
+    <app-list-pets
+        ownerGender="Male"
+        [pets]="pets | filterPets:  { ownerGender : 'Male', petType : petType }"
+    ></app-list-pets>
+
+    <app-list-pets
+        ownerGender="Female"
+        [pets]="pets | filterPets:  { ownerGender : 'Female', petType : petType }"
+    ></app-list-pets>
+
+</div>
+
+<ng-template #loading>
+    Loading...
+</ng-template>

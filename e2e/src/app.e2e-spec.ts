@@ -1,5 +1,5 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, logging, element, by } from 'protractor';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display Welcome navigation bar header', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('demo app is running!');
+    expect(element.all(by.css('.navbar .navbar-brand')).getText()).toEqual(['Welcome!']);
   });
 
   afterEach(async () => {
