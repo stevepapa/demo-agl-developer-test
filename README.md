@@ -26,6 +26,9 @@ This project was built using;
 ### Installing Angular CLI 
 `npm install -g @angular/cli`
 
+### Install dependencies
+After you have cloned the project run the below command in the root directory to install modules.
+`npm install`
 
 ### Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
